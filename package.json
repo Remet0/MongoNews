@@ -1,0 +1,40 @@
+{
+  "name": "mongonews",
+  "version": "1.0.0",
+  "description": "News article site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon serve.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=flase npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Remet0/MongoNews.git"
+  },
+  "keywords": [
+    "News",
+    "articles",
+    "mango",
+    "scrape"
+  ],
+  "author": "John Remeto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Remet0/MongoNews/issues"
+  },
+  "homepage": "https://github.com/Remet0/MongoNews#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.2"
+  }
+}
