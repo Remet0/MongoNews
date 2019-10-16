@@ -38,8 +38,7 @@ app.get('/api/articles', (req, res) => {
   article
     .find({ Saved: 'true' })
     .then(data => {
-      res.send(data);
-      console.log(data);
+      res.send(data.toObject());
     })
     .catch(err => {
       res.send(err);
@@ -50,7 +49,7 @@ app.post('/api/savedarticles', (req, res) => {
   article
     .updateOne({ Title: req.body.Title }, { $set: { Saved: 'true' } })
     .then(data => {
-      res.send(data.toObject());
+      res.send(data);
     })
     .catch(err => {
       res.send(err);
