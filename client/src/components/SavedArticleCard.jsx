@@ -10,7 +10,6 @@ const SavedArticleCard = () => {
   const [savedArticle, setSavedArticle] = useState([]);
   const [input, setInput] = useState('');
   const [formSubmit, setFormSubmit] = useState(false);
-  //might need to put in useEffect on mount
   useEffect(() => {
     const getArticle = async () => {
       const response = await fetch('/api/articles', {
