@@ -15,7 +15,8 @@ const SavedArticleCard = () => {
       const response = await fetch('/api/articles', {
         method: 'GET',
         headers: {
-          'Content-type': 'application/json'
+          'Content-type': 'application/json',
+          Accept: 'application/json'
         }
       });
       const json = await response.json();
