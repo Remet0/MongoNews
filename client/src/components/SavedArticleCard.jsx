@@ -20,6 +20,7 @@ const SavedArticleCard = () => {
       });
       const json = await response.json();
       setSavedArticle(json);
+      console.log(json);
     };
     getArticle();
   }, [formSubmit]);
