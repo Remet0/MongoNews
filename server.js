@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const article = require('./model.js');
-const morgan = require('./morgan');
+const morgan = require('morgan');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
