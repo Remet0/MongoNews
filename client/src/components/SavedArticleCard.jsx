@@ -19,7 +19,6 @@ const SavedArticleCard = () => {
           Accept: 'application/json'
         }
       });
-      console.log(response);
       const json = await response.json();
       setSavedArticle(json);
       console.log(json);
