@@ -1,17 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const Nav = () => {
   return (
     <>
       <NavBar>
+        <Header>Mango Scraper!!</Header>
         <List>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/saved">Saved Articles</a>
-          </li>
+          <ListLink>
+            <Link href="/">Home</Link>
+          </ListLink>
+          <ListLink>
+            <Link href="/saved">Saved Articles</Link>
+          </ListLink>
         </List>
       </NavBar>
     </>
@@ -29,6 +30,23 @@ const NavBar = styled.section`
 `;
 
 const List = styled.ul`
-  display: inline-block;
   list-style-type: none;
+  position: absolute;
+  right: 2em;
+`;
+
+const ListLink = styled.li`
+  display: inline;
+  margin-right: 2em;
+`;
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
+const Header = styled.h1`
+  position: absolute;
+  top: -10px;
+  margin-left: 2em;
 `;

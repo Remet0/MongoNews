@@ -3,20 +3,28 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let articleSchema = new Schema({
-    title: {
-        type: String,
-        trim: true
-    },
-    link: {
-        type: String,
-        trim: true
-    },
-    notes: {
-        type: String,
-        trim: true
-    }
+  Title: {
+    type: String,
+    trim: true
+  },
+  Link: {
+    type: String,
+    trim: true
+  },
+  Notes: {
+    type: [],
+    trim: true
+  },
+  Saved: {
+    type: Boolean,
+    default: false
+  },
+  Image: {
+    type: String,
+    trim: true
+  }
 });
 
-let article = mongoose.model("articles", articleSchema);
+let article = mongoose.model('articles', articleSchema);
 
 module.exports = article;
