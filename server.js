@@ -38,7 +38,7 @@ app.get('/api/articles', (req, res) => {
   article
     .find({ Saved: 'true' })
     .then(data => {
-      res.send(data.toObject());
+      res.send(data.toJson());
     })
     .catch(err => {
       res.send(err);
