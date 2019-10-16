@@ -23,7 +23,7 @@ const SavedArticleCard = () => {
       setSavedArticle(json);
     };
     getArticle();
-  }, []);
+  }, [formSubmit]);
 
   const postNotes = async (article, input) => {
     article.Notes.push(input);
