@@ -18,8 +18,7 @@ const SavedArticleCard = () => {
           'Content-type': 'application/json'
         }
       });
-      const json = await response.json();
-      setSavedArticle(json);
+      setSavedArticle(response);
     };
     getArticle();
   }, [formSubmit]);
