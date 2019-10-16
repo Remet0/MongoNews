@@ -50,7 +50,7 @@ app.post('/api/savedarticles', (req, res) => {
   article
     .updateOne({ Title: req.body.Title }, { $set: { Saved: 'true' } })
     .then(data => {
-      res.send(data);
+      res.send(data.toObject());
     })
     .catch(err => {
       res.send(err);
