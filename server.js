@@ -39,7 +39,7 @@ app.post('/api/articles', (req, res) => {
 app.get('/api/articles', (req, res) => {
   article
     .find({ Saved: 'true' })
-    .exec(data => {
+    .then(data => {
       res.send(data);
     })
     .catch(err => {
